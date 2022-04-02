@@ -1,0 +1,43 @@
+.main-font, .header-nav__item {
+  font-family: "Plus Jakarta Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: baseline;
+}
+.header-logo {
+  height: 28px;
+  width: 28px;
+}
+.header-nav {
+  width: 75%;
+}
+.header-nav__ul {
+  display: flex;
+  justify-content: space-between;
+}
+.header-nav__item {
+  line-height: 140%;
+  list-style-type: none;
+  min-width: 50px;
+}
+.header-nav__item:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */

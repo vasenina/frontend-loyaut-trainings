@@ -1,0 +1,24 @@
+{
+  "name": "frontend-loyaut-trainings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasenina/frontend-loyaut-trainings.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vasenina/frontend-loyaut-trainings/issues"
+  },
+  "homepage": "https://github.com/vasenina/frontend-loyaut-trainings#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "node-sass": "^7.0.1"
+  }
+}
