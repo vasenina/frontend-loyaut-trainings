@@ -1,0 +1,39 @@
+$breakpoints: (
+    phone: 480px,
+    tablet: 768px,
+    s-desktop: 1024px,
+    m-desktop: 1199px,
+) !default;
+
+$media-expressions: (
+    "screen": "screen",
+    "print": "print",
+    "handheld": "handheld",
+    "retina2x": (
+        "(-webkit-min-device-pixel-ratio: 2)",
+        "(min-resolution: 192dpi)",
+    ),
+    "retina3x": (
+        "(-webkit-min-device-pixel-ratio: 3)",
+        "(min-resolution: 350dpi)",
+    ),
+) !default;
+
+@mixin respond-to($breakpoint) {
+    // Retrieves the value from the key
+    $value: map-get($breakpoints, $breakpoint);
+
+    // If the key exists in the map
+    @if $value != null {
+        // Prints a media query based on the value
+        @media (max-width: $value) {
+            @content;
+        }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}

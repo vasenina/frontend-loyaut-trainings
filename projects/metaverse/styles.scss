@@ -2,6 +2,8 @@ $back-color: black;
 $blue-color: #00dbde;
 $lila-color: #7f5cff;
 
+@import "./screen-sizes.scss";
+
 @import url(//db.onlinewebfonts.com/c/56d500c6cf8b69f0dab010d9f6a3d644?family=HeliosC);
 
 .main-font {
@@ -11,6 +13,10 @@ $lila-color: #7f5cff;
     font-size: 20px;
     color: white;
     opacity: 0.7;
+
+    @include respond-to("s-desktop") {
+        font-size: 16px;
+    }
 }
 
 h1 {
@@ -22,6 +28,9 @@ h1 {
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: #ffffff;
+    @include respond-to("s-desktop") {
+        font-size: 36px;
+    }
 }
 h2 {
     font-family: "Plus Jakarta Display";
@@ -31,6 +40,9 @@ h2 {
     line-height: 140%;
     text-transform: uppercase;
     color: #ffffff;
+    @include respond-to("s-desktop") {
+        font-size: 16px;
+    }
 }
 
 body {
