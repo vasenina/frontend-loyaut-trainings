@@ -2,48 +2,9 @@ $back-color: black;
 $blue-color: #00dbde;
 $lila-color: #7f5cff;
 
-@import "./screen-sizes.scss";
-
-@import url(//db.onlinewebfonts.com/c/56d500c6cf8b69f0dab010d9f6a3d644?family=HeliosC);
-
-.main-font {
-    font-family: "Plus Jakarta Display", Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    color: white;
-    opacity: 0.7;
-
-    @include respond-to("s-desktop") {
-        font-size: 16px;
-    }
-}
-
-h1 {
-    font-family: "HeliosExtC", Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 140%;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    color: #ffffff;
-    @include respond-to("s-desktop") {
-        font-size: 36px;
-    }
-}
-h2 {
-    font-family: "Plus Jakarta Display";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 140%;
-    text-transform: uppercase;
-    color: #ffffff;
-    @include respond-to("s-desktop") {
-        font-size: 16px;
-    }
-}
+@import "./scss/screen-sizes.scss";
+@import "./scss/ui-elements.scss";
+@import "./scss/typography.scss";
 
 body {
     background-color: $back-color;
@@ -59,6 +20,7 @@ body {
     right: 0;
     padding: 20px 40px;
     align-items: baseline;
+    z-index: 999;
 
     &-logo {
         height: 28px;
@@ -100,7 +62,7 @@ body {
     background-image: url("./src/bcg-1.png");
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,7 +71,7 @@ body {
     &-title {
         // border-left: 6px $lila-color solid;
         position: relative;
-        padding-left: 60px;
+        padding: 20px 60px;
 
         &:before {
             content: "";
@@ -125,8 +87,42 @@ body {
     }
     &-title__text {
         width: 600px;
+        margin-bottom: 50px;
     }
     &-plain {
         content: "&#10022";
+    }
+    &__button {
+    }
+}
+
+.about-us {
+    background-size: cover;
+    background-position: center center;
+
+    background-image: url("./src/bcg-2.png");
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+
+    &-block {
+        position: relative;
+        padding: 20px 60px;
+        width: 35%;
+
+        &:before {
+            content: "";
+            height: 100%;
+            width: 6px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #56ffeb;
+            box-shadow: 0px 4px 13px rgba(191, 58, 255, 0.44);
+            border-radius: 62px;
+        }
     }
 }

@@ -26,7 +26,7 @@ $media-expressions: (
     // If the key exists in the map
     @if $value != null {
         // Prints a media query based on the value
-        @media (max-width: $value) {
+        @media (min-width: $value) {
             @content;
         }
     }
